@@ -90,7 +90,7 @@ Once the spark-operator is deployed you can run the pyspark test with the follow
 kubectl apply -f spark-py-test.yaml
 ```
 
-If the PySpark test application is created successfully you will be able to see it running the following command:
+If the PySpark test application is created successfully you will be able to see it running using the following command:
 
 ```
 kubectl get sparkapplications pyspark-pi -o=yaml
