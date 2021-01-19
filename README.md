@@ -84,4 +84,19 @@ If it is installed correctly you should see two new custom resource definitions 
 
 4) <b>Test the operator using sample Spark applications</b>
 
+Once the spark-operator is deployed you can run the pyspark test with the following command:
+
+```
+kubectl apply -f spark-py-test.yaml
+```
+
+If the PySpark test application is created successfully you will be able to see it running the following command:
+
+```
+kubectl get sparkapplications pyspark-pi -o=yaml
+```
+
+The sample pulls a pre-built image from GCP, so it takes a few seconds for the application to run within Kubernetes. I used Octant to verify the application ran and completed as expected. The events should be visible in your spark-apps namespace:
+
+![alt text](images/k8s-events-spark-test.png "Octant Dashboard - spark-apps namespace events")
 
