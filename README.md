@@ -37,7 +37,7 @@ Once you have your K8s environment running the next step is to setup K8s for the
 From the root directory of this repository, run the following:
 
 ```
-kubectl create -f spark-operator-setup.yaml
+kubectl create -f spark-operator.yaml
 ```
 
 Sample output:
