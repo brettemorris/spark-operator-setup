@@ -93,7 +93,7 @@ kubectl apply -f spark-py-test.yaml
 If the PySpark test application is created successfully you will be able to see it running using the following command:
 
 ```
-kubectl get sparkapplications pyspark-pi -o=yaml
+kubectl get sparkapplications pyspark-pi -o=yaml --namespace=spark-apps
 ```
 
 The sample pulls a pre-built image from GCP, so it takes a few seconds for the application to run within Kubernetes. I used Octant to verify the application ran and completed as expected. The events should be visible in your spark-apps namespace:
