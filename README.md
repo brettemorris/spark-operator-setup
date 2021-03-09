@@ -61,7 +61,7 @@ Now we are ready to install the Spark operator using the following Helm 3 comman
 ```
 helm repo add spark-operator https://googlecloudplatform.github.io/spark-on-k8s-operator
 
-helm install sparkoperator spark-operator/spark-operator --namespace spark-operator --set sparkJobNamespace=spark-apps,enableWebhook=true
+helm install sparkoperator spark-operator/spark-operator --namespace spark-operator --set webhook.enable=true,sparkJobNamespace=spark-apps
 ```
 
 Note: In production, we will enable metric collection as well, so we need to add “enableMetrics=true” to the “—-set” command.
